@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from "react";
+import React, { useMemo } from "react";
 import { useLoader, useFrame } from "@react-three/fiber";
 import { useTexture } from "@react-three/drei";
 import * as THREE from "three";
@@ -14,7 +14,7 @@ function Drone() {
   const props = useTexture({
     map: require('assets/drone/drone_d.png'),
     normalMap: require('assets/drone/drone_n.png'),
-    // displacementMap: require('assets/drone/drone_d.png'),
+    displacementMap: require('assets/drone/drone_m.png'),
     roughnessMap: require('assets/drone/drone_r.png'),
     aoMap: require('assets/drone/drone_ao.png'),
     emissiveMap: require('assets/drone/drone_e.png')
@@ -37,14 +37,6 @@ function Drone() {
       objectGeometry
     };
   }, [obj]);
-
-  useEffect(() => {
-    if (ref.current) {
-      // @ts-ignore
-      ref.current.children[0].material.emissive.setHex('#FFDD4A')
-    }
-
-  }, [obj])
 
   useFrame((state, delta) => {
     if (!ref.current || !throttleRef.current) return;
