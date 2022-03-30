@@ -1,0 +1,181 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(221, 174, 126, 0.05);
+
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.selector-wrapper {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > div {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+   > h2 {
+     margin: 0 0 40px 0;
+     font-size: 4rem;
+     font-style: italic;
+     font-weight: 700;
+     text-transform: uppercase;
+   }
+  }
+}
+
+.presentation {
+  display: block;
+  width: 25vw;
+  height: 25vw;
+
+  margin: 15px;
+
+  transition: 0.3s ease-in-out;
+
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.15);
+
+  position: relative;
+  overflow: hidden;
+
+  opacity: 1;
+  transform: skewX(-5deg);
+}
+
+.presentation > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  transition: opacity 0.2s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.presentation > span {
+  display: block;
+  position: absolute;
+  z-index: 9;
+
+  padding: 15px;
+
+  bottom: 0;
+
+  font-size: 4rem;
+  line-height: 3rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+
+  opacity: 0.5;
+  text-align: center;
+
+  transition: opacity 0.22s ease-in-out;
+}
+
+.presentation:hover {
+  width: 30vw;
+  height: 30vw;
+}
+
+.presentation:hover > span {
+  opacity: 1;
+}
+
+.presentation--hovered > img {
+  transform: scale(1.25);
+}
+
+.presentation--blurred:not(.presentation--hovered) > img {
+  opacity: 0.75;
+  filter: grayscale(100%);
+}
+
+.presentation__item {
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+
+  display: flex;
+  justify-content: space-between;
+
+  > .presentation__item-wrapper {
+    width: 100%;
+    position: relative;
+
+    > .presentation__details {
+      position: absolute;
+      z-index: 9;
+      left: 0;
+      right: 0;
+      bottom: 5%;
+      text-align: center;
+
+      &--top {
+        top: 8%;
+        bottom: unset;
+      }
+
+      > h1 {
+        font-size: 12rem;
+        line-height: 12rem;
+        letter-spacing: 1px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #fff;
+
+        margin: 0;
+      }
+
+      > p {
+        margin: 0 0 10px 0;
+
+        color: #fff;
+      }
+    }
+  }
+}
+
+.presentation__item.presentation__drone {
+  // background-color: #d17b88;
+  background-color: #1B1825;
+
+  position: relative;
+}
+
+.presentation__item.presentation__tesla {
+  background-color: #AF1B3F;
+}
+
+.presentation__item.presentation__sword {
+  background-color: #101935;
+}
+
+.config-container {
+  width: 40vw;
+  height: 100vh;
+  background-color: #fff;
+}
+
+canvas {
+  touch-action: none;
+}

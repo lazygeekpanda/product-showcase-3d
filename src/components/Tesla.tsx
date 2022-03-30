@@ -1,45 +1,58 @@
-import React, { useMemo } from "react";
-import { useLoader, useFrame } from "@react-three/fiber";
-import { useTexture } from "@react-three/drei";
-import * as THREE from "three";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import { LineGeometry } from "three/examples/jsm/lines/LineGeometry";
+import React, { } from 'react'
+import { useLoader, useFrame } from '@react-three/fiber'
+import * as THREE from 'three'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
-const SCALE = 0.7;
+const SCALE = 0.7
 
-function Tesla() {
-  const ref = React.useRef<THREE.Group>();
-  const lightRef = React.useRef<THREE.PointLight>();
-  const obj: any = useLoader(GLTFLoader, require("assets/tesla/tesla.glb"));
+const Tesla: React.FC<any> = ({ rimsColor, bodyColor, grillColor, chromeColor }) => {
+  const ref = React.useRef<THREE.Group>()
+  const obj: any = useLoader(GLTFLoader, require('assets/tesla/tesla.glb'))
 
-  useFrame((state, delta) => {
-    if (!ref.current || !lightRef.current) return;
+  React.useEffect(() => {
+    if (!ref.current) { return }
 
-    const t = state.clock.getElapsedTime();
-    // ref.current.rotation.y = Math.PI / 1.75 + Math.cos(t / 4)
-    // ref.current.rotation.x = Math.sin(t / 4) / 8
-    lightRef.current.position.x = state.mouse.x * 10;
-    lightRef.current.position.z = 5 + -state.mouse.y;
-    // ref.current.rotation.z = (1 + Math.sin(t / 1.5)) / 20
-  });
+    // @ts-ignore
+    ref.current.traverse((c: any) => {
+      if (c.type === 'Mesh') {
+        console.log(c.userData.name)
+        if (c.userData.name.indexOf('wheel') !== -1) {
+          c.material.color.set(rimsColor)
+        } else if (c.userData.name.indexOf('bod') !== -1) {
+          c.material.color.set(bodyColor)
+        } else if (c.userData.name.indexOf('grill') !== -1) {
+          c.material.color.set(grillColor)
+        } else if (c.userData.name.indexOf('chr') !== -1) {
+          c.material.color.set(chromeColor)
+        }
+      }
+    })
+  }, [rimsColor, bodyColor, grillColor, chromeColor])
+
+  useFrame(({ clock }, delta) => {
+    if (!ref.current) return
+
+    const t = clock.getElapsedTime()
+    ref.current.rotation.y = -0.5 + Math.PI / 0.5 + Math.cos(t / 2) / 8
+
+    ref.current.traverse((c: any) => {
+      if (c.type === 'Mesh') {
+        if (c.userData.name.indexOf('emit') !== -1) {
+          c.material.emissiveIntensity = Math.abs(
+            Math.sin(clock.elapsedTime * 0.5)
+          );
+        }
+      }
+    })
+  })
 
   return (
     <>
-      <pointLight ref={lightRef} intensity={10} color="#B8B3E9" position={[0, 7, 0]} />
-      <mesh rotation-x={-Math.PI / 2 + 0.25} rotation-y={-0.1} position={[0, -0.68, 0]} receiveShadow>
-        <boxBufferGeometry args={[5, 8]} />
-        <meshStandardMaterial color="#B8B3E9" />
-      </mesh>
-      <group
-        ref={ref}
-        // position={[0, 0.75, 0]}
-        rotation={[0.25, 0, 0.1]}
-        scale={[SCALE, SCALE, SCALE]}
-      >
+      <group ref={ref} position={[0.75, -1, 0]} rotation={[0, -0.5, 0]} scale={[SCALE, SCALE, SCALE]}>
         <primitive object={obj.scene} castShadow />
       </group>
     </>
-  );
+  )
 }
 
-export default Tesla;
+export default Tesla
