@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/product-showcase-3d/static/css/main.b0b5becf.css",
-    "main.js": "/product-showcase-3d/static/js/main.48c82280.js",
+    "main.js": "/product-showcase-3d/static/js/main.d7844cec.js",
     "static/js/158.70a6d477.chunk.js": "/product-showcase-3d/static/js/158.70a6d477.chunk.js",
     "static/js/9.3c73daa3.chunk.js": "/product-showcase-3d/static/js/9.3c73daa3.chunk.js",
     "static/js/86.0218163f.chunk.js": "/product-showcase-3d/static/js/86.0218163f.chunk.js",
-    "static/js/41.7a550542.chunk.js": "/product-showcase-3d/static/js/41.7a550542.chunk.js",
+    "static/js/41.4dfce8d2.chunk.js": "/product-showcase-3d/static/js/41.4dfce8d2.chunk.js",
     "static/js/787.b07f145c.chunk.js": "/product-showcase-3d/static/js/787.b07f145c.chunk.js",
     "static/js/300.1aaf7f94.chunk.js": "/product-showcase-3d/static/js/300.1aaf7f94.chunk.js",
     "static/js/193.4eff29b4.chunk.js": "/product-showcase-3d/static/js/193.4eff29b4.chunk.js",
@@ -24,11 +24,11 @@
     "static/media/drone_e.png": "/product-showcase-3d/static/media/drone_e.7f434593a05e20091884.png",
     "index.html": "/product-showcase-3d/index.html",
     "main.b0b5becf.css.map": "/product-showcase-3d/static/css/main.b0b5becf.css.map",
-    "main.48c82280.js.map": "/product-showcase-3d/static/js/main.48c82280.js.map",
+    "main.d7844cec.js.map": "/product-showcase-3d/static/js/main.d7844cec.js.map",
     "158.70a6d477.chunk.js.map": "/product-showcase-3d/static/js/158.70a6d477.chunk.js.map",
     "9.3c73daa3.chunk.js.map": "/product-showcase-3d/static/js/9.3c73daa3.chunk.js.map",
     "86.0218163f.chunk.js.map": "/product-showcase-3d/static/js/86.0218163f.chunk.js.map",
-    "41.7a550542.chunk.js.map": "/product-showcase-3d/static/js/41.7a550542.chunk.js.map",
+    "41.4dfce8d2.chunk.js.map": "/product-showcase-3d/static/js/41.4dfce8d2.chunk.js.map",
     "787.b07f145c.chunk.js.map": "/product-showcase-3d/static/js/787.b07f145c.chunk.js.map",
     "300.1aaf7f94.chunk.js.map": "/product-showcase-3d/static/js/300.1aaf7f94.chunk.js.map",
     "193.4eff29b4.chunk.js.map": "/product-showcase-3d/static/js/193.4eff29b4.chunk.js.map",
@@ -36,6 +36,6 @@
   },
   "entrypoints": [
     "static/css/main.b0b5becf.css",
-    "static/js/main.48c82280.js"
+    "static/js/main.d7844cec.js"
   ]
 }
