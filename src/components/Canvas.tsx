@@ -1,11 +1,16 @@
-import * as React from "react";
+import * as React from 'react'
 import * as THREE from 'three'
-import { Canvas as R3FCanvas } from "@react-three/fiber";
-import { ContactShadows } from "@react-three/drei";
+import { Canvas as R3FCanvas } from '@react-three/fiber'
+import { ContactShadows } from '@react-three/drei'
 
 const Canvas: React.FC = ({ children }) => (
-  <R3FCanvas camera={{ position: [0, 0, 4], fov: 75 }} shadows dpr={[1, 2]}
-    onCreated={({ gl }) => { gl.toneMapping = THREE.NoToneMapping }}
+  <R3FCanvas
+    camera={{ position: [0, 0, 4], fov: 75 }}
+    dpr={[1, 2]}
+    shadows
+    onCreated={({ gl }) => {
+      gl.toneMapping = THREE.NoToneMapping
+    }}
   >
     {children}
     <ContactShadows
@@ -18,6 +23,6 @@ const Canvas: React.FC = ({ children }) => (
       far={2}
     />
   </R3FCanvas>
-);
+)
 
-export default Canvas;
+export default Canvas

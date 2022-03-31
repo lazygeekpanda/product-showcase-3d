@@ -1,0 +1,240 @@
+.presentation {
+  display: block;
+  width: 25vw;
+  height: 25vw;
+
+  margin: 15px;
+
+  transition: 0.3s ease-in-out;
+
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.15);
+
+  position: relative;
+  overflow: hidden;
+
+  opacity: 1;
+  transform: skewX(-5deg);
+}
+
+.presentation > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  transition: opacity 0.2s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.presentation > span {
+  display: block;
+  position: absolute;
+  z-index: 9;
+
+  padding: 15px;
+
+  bottom: 0;
+
+  font-size: 4rem;
+  line-height: 3rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+
+  opacity: 0.5;
+  text-align: center;
+
+  transition: opacity 0.22s ease-in-out;
+}
+
+.presentation:hover {
+  width: 30vw;
+  height: 30vw;
+}
+
+.presentation:hover > span {
+  opacity: 1;
+}
+
+.presentation--hovered > img {
+  transform: scale(1.25);
+}
+
+.presentation--blurred:not(.presentation--hovered) > img {
+  opacity: 0.75;
+  filter: grayscale(100%);
+}
+
+.presentation__page {
+  width: 100%;
+  height: 100%;
+}
+
+.presentation__item {
+  width: 100%;
+  height: calc(100% - 20px);
+
+  overflow: hidden;
+
+  display: flex;
+  justify-content: space-between;
+
+  > .presentation__item-wrapper {
+    width: 100%;
+    position: relative;
+
+    > .presentation__details {
+      position: absolute;
+      z-index: 9;
+      left: 0;
+      right: 0;
+      bottom: 5%;
+      text-align: center;
+
+      &--top {
+        top: 8%;
+        bottom: unset;
+      }
+
+      > h1 {
+        font-size: 12rem;
+        line-height: 12rem;
+        letter-spacing: 1px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #fff;
+
+        margin: 0;
+
+        opacity: 0.1;
+      }
+    }
+  }
+}
+
+.presentation__item.presentation__drone {
+  background-color: #1b1825;
+}
+
+.presentation__item.presentation__tesla {
+  background-color: #af1b3f;
+}
+
+.presentation__item.presentation__sword {
+  background-color: #101935;
+}
+
+.credits {
+  flex: 1;
+  height: 20px;
+  text-align: center;
+
+  font-weight: 500;
+
+  position: relative;
+
+  > p {
+    margin: 0;
+    margin-top: 3px;
+
+    > a {
+      display: inline-block;
+      color: blue;
+      margin: 0 5px;
+    }
+  }
+}
+
+.footer-navigation {
+  position: absolute;
+
+  top: -10px;
+  transform: translateY(-100%);
+
+  font-size: 1.25rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 1px;
+
+    background-color: #fff;
+  }
+
+  &--previous {
+    left: 10px;
+    padding-left: 40px;
+
+    &::before {
+      left: 0;
+    }
+  }
+
+  &--next {
+    right: 10px;
+    padding-right: 40px;
+
+    &::before {
+      right: 0;
+    }
+  }
+
+  > a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+  }
+}
+
+@media (max-width: 700px) {
+  .selector-wrapper {
+    > div {
+      flex-direction: column;
+      text-align: center;
+
+      .presentation {
+        width: 60vw;
+        height: 150px;
+
+        > span {
+          display: none;;
+        }
+      }
+    }
+  }
+  .presentation__item {
+    height: calc(100% - 50px);
+  }
+
+  .credits {
+    height: 50px;
+    font-size: 0.95rem;
+    > p {
+      margin-top: 8px;
+    }
+  }
+
+  .presentation__item
+    > .presentation__item-wrapper
+    > .presentation__details
+    > h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+
+  .footer-navigation {
+    font-size: 0.95rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

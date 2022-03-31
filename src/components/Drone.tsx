@@ -38,7 +38,7 @@ function Drone() {
     }
   }, [obj])
 
-  useFrame((state, delta) => {
+  useFrame((state) => {
     if (!ref.current || !throttleRef.current) return
 
     const t = state.clock.getElapsedTime()

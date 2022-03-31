@@ -9,7 +9,7 @@ const routes = [
   {
     path: '/drone',
     name: 'drone',
-    component: lazy(() => import('pages/Drone')),
+    component: lazy(() => import('pages/Drone/Drone')),
   },
   {
     path: '/tesla',

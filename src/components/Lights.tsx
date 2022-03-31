@@ -3,14 +3,6 @@ import * as React from "react";
 const Lights: React.FC = () => {
   return (
     <>
-      {/* <pointLight color="#fff" intensity={0.01} position={[0.1, 0.1, 100]}
-        // @ts-ignore
-        lookAt={[0, 0, 0]} /> */}
-        {/* <ambientLight
-          color="#B8B3E9"
-          intensity={1}
-          position={[100, 100, 100]}
-        /> */}
         <spotLight
           position={[0, 100, 0]}
           angle={0.15}
@@ -19,8 +11,6 @@ const Lights: React.FC = () => {
           castShadow
           color="#00F0B5"
           intensity={1}
-          // @ts-ignore
-          lookAt={[0, 0, 0]}
         />
         <spotLight
           position={[-10, -10, 0]}
@@ -48,12 +38,6 @@ const Lights: React.FC = () => {
           intensity={1}
           position={[0, -10, 0]}
         />
-        {/* <spotLight
-          color="red"
-          position={[-10, 100, 10]}
-          angle={0.15}
-          castShadow
-        /> */}
     </>
   );
 };

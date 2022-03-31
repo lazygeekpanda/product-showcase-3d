@@ -36,28 +36,30 @@ const Main: React.FC = () => {
   )
   return (
     <div className="selector-wrapper">
-      <div><h2>Choose model</h2></div>
-     <div> {presentations.map((presentation) => (
-        <Link
-          key={presentation.id}
-          to={presentation.url}
-          className={
-            [
-              "presentation",
-              hovered === presentation.id ? "presentation--hovered" : "",
-              hovered !== 0 ? "presentation--blurred" : "",
-            ].join(' ')
-          }
-          onMouseEnter={() => setHovered(presentation.id)}
-          onMouseLeave={() => setHovered(0)}
-        >
-          <span>{presentation.name}</span>
-          <img
-            src={require(`assets/previews/${presentation.preview}`)}
-            alt={presentation.name}
-          />
-        </Link>
-      ))}</div>
+      <div>
+        <h2>Choose model</h2>
+      </div>
+      <div>
+        {presentations.map((presentation) => (
+          <Link
+            key={presentation.id}
+            to={presentation.url}
+            className={[
+              'presentation',
+              hovered === presentation.id ? 'presentation--hovered' : '',
+              hovered !== 0 ? 'presentation--blurred' : '',
+            ].join(' ')}
+            onMouseEnter={() => setHovered(presentation.id)}
+            onMouseLeave={() => setHovered(0)}
+          >
+            <span>{presentation.name}</span>
+            <img
+              src={require(`assets/previews/${presentation.preview}`)}
+              alt={presentation.name}
+            />
+          </Link>
+        ))}
+      </div>
     </div>
   )
 }

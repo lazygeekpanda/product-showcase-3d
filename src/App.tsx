@@ -13,9 +13,13 @@ const App: React.FC = () => {
           <Routes>
             <Route />
             {routes.map((route) => (
-              <Route key={route.name} path={route.path} element={<route.component />} />
+              <Route
+                key={route.name}
+                path={route.path}
+                element={<route.component />}
+              />
             ))}
-            </Routes>
+          </Routes>
         </React.Suspense>
       </div>
     </HashRouter>
