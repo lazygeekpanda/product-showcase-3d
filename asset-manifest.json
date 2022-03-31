@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/product-showcase-3d/static/css/main.b0b5becf.css",
+    "main.js": "/product-showcase-3d/static/js/main.48c82280.js",
+    "static/js/158.70a6d477.chunk.js": "/product-showcase-3d/static/js/158.70a6d477.chunk.js",
+    "static/js/9.3c73daa3.chunk.js": "/product-showcase-3d/static/js/9.3c73daa3.chunk.js",
+    "static/js/86.0218163f.chunk.js": "/product-showcase-3d/static/js/86.0218163f.chunk.js",
+    "static/js/41.7a550542.chunk.js": "/product-showcase-3d/static/js/41.7a550542.chunk.js",
+    "static/js/787.b07f145c.chunk.js": "/product-showcase-3d/static/js/787.b07f145c.chunk.js",
+    "static/js/300.1aaf7f94.chunk.js": "/product-showcase-3d/static/js/300.1aaf7f94.chunk.js",
+    "static/js/193.4eff29b4.chunk.js": "/product-showcase-3d/static/js/193.4eff29b4.chunk.js",
+    "static/js/268.5eaed283.chunk.js": "/product-showcase-3d/static/js/268.5eaed283.chunk.js",
+    "static/media/drone_n.png": "/product-showcase-3d/static/media/drone_n.d6df68de52fc64570a07.png",
+    "static/media/tesla.glb": "/product-showcase-3d/static/media/tesla.b88295fa94f6bf1a67df.glb",
+    "static/media/drone_d.png": "/product-showcase-3d/static/media/drone_d.f38fc946fff928374176.png",
+    "static/media/drone_r.png": "/product-showcase-3d/static/media/drone_r.1b6647d726dd59387cb0.png",
+    "static/media/drone_ao.png": "/product-showcase-3d/static/media/drone_ao.e0ca3ee8d2ae96005ad0.png",
+    "static/media/Sword3.glb": "/product-showcase-3d/static/media/Sword3.d5d32c2602591bfe3642.glb",
+    "static/media/tesla.png": "/product-showcase-3d/static/media/tesla.03956cbce95aecbbae96.png",
+    "static/media/drone.png": "/product-showcase-3d/static/media/drone.0dfe3a7f151153f2be5f.png",
+    "static/media/drone.FBX": "/product-showcase-3d/static/media/drone.d7c1b7414a5eae622e04.FBX",
+    "static/media/sword.png": "/product-showcase-3d/static/media/sword.471b9d7e7706faedc6e6.png",
+    "static/media/drone_m.png": "/product-showcase-3d/static/media/drone_m.a1b537ce2163c31a64f9.png",
+    "static/media/drone_e.png": "/product-showcase-3d/static/media/drone_e.7f434593a05e20091884.png",
+    "index.html": "/product-showcase-3d/index.html",
+    "main.b0b5becf.css.map": "/product-showcase-3d/static/css/main.b0b5becf.css.map",
+    "main.48c82280.js.map": "/product-showcase-3d/static/js/main.48c82280.js.map",
+    "158.70a6d477.chunk.js.map": "/product-showcase-3d/static/js/158.70a6d477.chunk.js.map",
+    "9.3c73daa3.chunk.js.map": "/product-showcase-3d/static/js/9.3c73daa3.chunk.js.map",
+    "86.0218163f.chunk.js.map": "/product-showcase-3d/static/js/86.0218163f.chunk.js.map",
+    "41.7a550542.chunk.js.map": "/product-showcase-3d/static/js/41.7a550542.chunk.js.map",
+    "787.b07f145c.chunk.js.map": "/product-showcase-3d/static/js/787.b07f145c.chunk.js.map",
+    "300.1aaf7f94.chunk.js.map": "/product-showcase-3d/static/js/300.1aaf7f94.chunk.js.map",
+    "193.4eff29b4.chunk.js.map": "/product-showcase-3d/static/js/193.4eff29b4.chunk.js.map",
+    "268.5eaed283.chunk.js.map": "/product-showcase-3d/static/js/268.5eaed283.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b0b5becf.css",
+    "static/js/main.48c82280.js"
+  ]
+}
