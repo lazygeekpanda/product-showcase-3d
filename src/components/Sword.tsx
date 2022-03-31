@@ -16,7 +16,7 @@ const Sword: React.FC<{ color: string }> = ({ color }) => {
 
     ref.current.traverse((c: any) => {
       if (c.type === 'Mesh') {
-        if (c.material.id === 37 || c.material.id === 39) {
+        if (c.material.name === "Material.001" || c.material.name === "Material.004") {
           c.material.emissive.set(color)
         }
       }
@@ -45,7 +45,7 @@ const Sword: React.FC<{ color: string }> = ({ color }) => {
     // Pulsation animation
     ref.current.traverse((c: any) => {
       if (c.type === 'Mesh') {
-        if (c.material.id === 37 || c.material.id === 39) {
+        if (c.material.name === "Material.001" || c.material.name === "Material.004") {
           c.material.emissiveIntensity = Math.abs(
             Math.sin(clock.elapsedTime * 0.5)
           )

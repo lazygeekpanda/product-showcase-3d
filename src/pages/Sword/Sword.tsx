@@ -86,7 +86,7 @@ const SwordPresentation: React.FC = () => {
               '#EDAF97',
             ]}
             color={color}
-            onChangeComplete={(color: any) => {
+            onChange={(color: any) => {
               setColor(color.hex)
             }}
           />
