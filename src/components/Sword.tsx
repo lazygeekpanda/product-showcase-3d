@@ -10,7 +10,9 @@ const Sword: React.FC<{ color: string }> = ({ color }) => {
   const model: any = useLoader(GLTFLoader, require('assets/sword/Sword3.glb'))
 
   React.useEffect(() => {
-    if (!ref.current) { return }
+    if (!ref.current) {
+      return
+    }
 
     ref.current.traverse((c: any) => {
       if (c.type === 'Mesh') {
@@ -46,7 +48,7 @@ const Sword: React.FC<{ color: string }> = ({ color }) => {
         if (c.material.id === 37 || c.material.id === 39) {
           c.material.emissiveIntensity = Math.abs(
             Math.sin(clock.elapsedTime * 0.5)
-          );
+          )
         }
       }
     })
@@ -56,13 +58,14 @@ const Sword: React.FC<{ color: string }> = ({ color }) => {
   })
 
   return (
-
-      <group ref={ref} position={[-0.5, 0, 0]} 
+    <group
+      ref={ref}
+      position={[-0.5, 0, 0]}
       // rotation={[-2, 0.75, -0.5]}
-      scale={[SCALE, SCALE * 1.1, SCALE]}>
-        <primitive object={model.scene} dispose={null} castShadow />
-      </group>
-
+      scale={[SCALE, SCALE * 1.1, SCALE]}
+    >
+      <primitive object={model.scene} dispose={null} castShadow />
+    </group>
   )
 }
 

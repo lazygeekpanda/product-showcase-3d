@@ -1,7 +1,8 @@
 {
-  "name": "drone-customizer-rf3",
-  "version": "0.1.0",
-  "private": true,
+  "name": "product-showcase-3d",
+  "version": "0.1.1",
+  "private": false,
+  "homepage": "http://lazygeekpanda.github.io/product-showcase-3d",
   "dependencies": {
     "@react-spring/three": "^9.4.4",
     "@react-three/drei": "^8.20.1",
@@ -26,7 +27,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -49,6 +52,7 @@
   "devDependencies": {
     "@types/react-color": "^3.0.6",
     "@types/three": "^0.139.0",
+    "gh-pages": "^3.2.3",
     "sass": "^1.49.9"
   }
 }
